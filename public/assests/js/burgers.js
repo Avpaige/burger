@@ -3,13 +3,13 @@ $(function() {
       var id = $(this).data("id");
       var newState = $(this).data("eaten");
   
-      var newBurgerAvail = {
+      var updateAvail = {
         devour: newState
       };
   
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newBurgerAvail
+        data: updateAvail
       }).then(
         function() {
           console.log("changed devoured to", newState);

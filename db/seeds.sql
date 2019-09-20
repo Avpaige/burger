@@ -9,4 +9,4 @@ INSERT INTO burgers (burger_name, devoured) VALUES ("Jalepeno Burger", False);
 INSERT INTO burgers (burger_name, devoured) VALUES ("Korean BBQ Burger", False);
 INSERT INTO burgers (burger_name, devoured) VALUES ("Turkey Burger", False);
 
-
+INSERT INTO burgers (burger_name, devoured) VALUES ("Beyond Burger", True);

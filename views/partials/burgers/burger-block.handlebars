@@ -1,8 +1,8 @@
 <li>
-	{{name}}
+	{{burger_name}}
 
-	<button class="change-devour" data-id="{{id}}" data-eaten="{{devour}}">
-		{{#if devour}}Sold Out!{{else}}Order Now!{{/if}}
+	<button class="change-devour" data-id="{{id}}" data-eaten="{{devoured}}">
+		{{#if devour}}Order Now!{{else}}Restock{{/if}}
 	</button>
 
 	<button class="delete-burg" data-id="{{this.id}}" DELETE!></button>

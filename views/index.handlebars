@@ -3,9 +3,9 @@
 <h2>Order Now!</h2>
 
 <ul>
-  {{#each burger}}
+  {{#each burgers}}
     {{#unless devour}}
-      {{> burgers/burger-block devour=true}}
+      {{> burgers/burger-block devoured=false}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -13,9 +13,9 @@
 <h2>Sold Out!</h2>
 
 <ul>
-  {{#each burger}}
+  {{#each burgers}}
     {{#if devour}}
-      {{> burgers/burger-block devour=false}}
+      {{> burgers/burger-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
