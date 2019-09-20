@@ -4,8 +4,8 @@
 
 <ul>
   {{#each burger}}
-    {{#unless eaten}}
-      {{> cats/cat-block devour=true}}
+    {{#unless devour}}
+      {{> burgers/burger-block devour=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -14,7 +14,7 @@
 
 <ul>
   {{#each burger}}
-    {{#if avail}}
+    {{#if devour}}
       {{> burgers/burger-block devour=false}}
     {{/if}}
   {{/each}}
@@ -31,7 +31,7 @@
     <div class="form-group">
     <label for="state">Available Now</label><br>
     <input type="radio" name="devour" value="1" checked> Available<br>
-    <input type="radio" name="devour" value="0"> Sold out!
+    <input type="radio" name="devour" value="0"> Sold Out!
   </div>
 
 

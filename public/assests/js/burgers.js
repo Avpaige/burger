@@ -1,18 +1,18 @@
 $(function() {
     $(".change-devour").on("click", function(event) {
       var id = $(this).data("id");
-      var newState = $(this).data("newsleep");
+      var newState = $(this).data("eaten");
   
       var newBurgerAvail = {
         devour: newState
       };
   
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newBurgerAvail
       }).then(
         function() {
-          console.log("changed sleep to", newState);
+          console.log("changed devoured to", newState);
           location.reload();
         }
       );
@@ -22,14 +22,14 @@ $(function() {
       event.preventDefault();
   
       var Burger = {
-        name: $("#ca").val().trim(),
-        sleepy: $("[name=devour]:checked").val().trim()
+        name: $("#newBurg").val().trim(),
+        devour: $("[name=devour]:checked").val().trim()
       };
   
       
       $.ajax("/api/burgers", {
         type: "POST",
-        data: newCat
+        data: Burger
       }).then(
         function() {
           console.log("Burger added");

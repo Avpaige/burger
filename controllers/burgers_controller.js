@@ -6,7 +6,7 @@ var burgers = require("../models/burger");
 
 
 router.get("/", function(req, res) {
-  cat.all(function(data) {
+  burgers.all(function(data) {
     var dbObj = {
       burgers: data
     };
