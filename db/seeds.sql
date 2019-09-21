@@ -1,3 +1,5 @@
+USE burgers_db;
+
 INSERT INTO burgers (burger_name, devoured) VALUES ("BBQ Burger", False);
 INSERT INTO burgers (burger_name, devoured) VALUES ("American Burger", False);
 INSERT INTO burgers (burger_name, devoured) VALUES ("Bleu Burger", False);

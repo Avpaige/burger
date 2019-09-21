@@ -1,20 +1,71 @@
 li {
     padding: 5px;
+    padding-left: 5%;
     margin: 5px;
-    background: #faebd7;
+    background: lightgray;
+    width: 60%;
+    color: black;
+    font-weight: bold;
+    font-family: 'Mansalva', cursive;
+    font-size: 20px;
+  }
+
+ 
+
+  .container2{
+
+    background: lightgray;
+    color: black;
+    width: 50%;
+    padding: 10px;
+    font-family: 'Mansalva', cursive;
+   
   }
   
   .label {
     font-weight: bold;
   }
   
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
   .form-group {
     margin-bottom: 5px;
   }
   
+  #body{
+    background-image: url("../img/burger2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    background-color:black;
+    font-family: 'Mansalva', cursive;
+ 
+}
+
+  h1{
+    padding-top: 3%;
+    text-align: center;
+
+  }
+
+  #header{
+    font-size: 70px;
+
+  }
+  .container{
+
+    padding-top:5%;
+  }
+
+  h2{
+
+    padding-left: 75px;
+  }
+
+  .sub{
+    font-size: 20px;
+
+  }
+
+  .btn-dark{
+    font-size: 40px;
+
+  }
