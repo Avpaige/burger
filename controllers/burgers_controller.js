@@ -10,13 +10,13 @@ router.get("/", function(req, res) {
     var dbObj = {
       burgers: data
     };
-    console.log(dbObj);
+    // console.log(dbObj);
     res.render("index", dbObj);
   });
 });
 
 router.post("/api/burgers", function(req, res) {
-  burgers.create([
+   burgers.create([
     "burger_name", "devoured"
   ], [
     req.body.burger_name, req.body.devoured
@@ -41,17 +41,6 @@ router.put("/api/burgers/:id", function(req, res) {
   });
 });
 
-router.delete("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
-
-  burgers.delete(condition, function(result) {
-    if (result.affectedRows == 0) {
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
-    }
-  });
-});
 
 
 module.exports = router;

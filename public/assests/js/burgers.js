@@ -4,7 +4,7 @@ $(function() {
       var newState = $(this).data("eaten");
   
       var updateAvail = {
-        devour: newState
+        devoured: newState
       };
   
       $.ajax("/api/burgers/" + id, {
@@ -20,35 +20,25 @@ $(function() {
   
     $(".create-form").on("submit", function(event) {
       event.preventDefault();
-  
       var Burger = {
-        name: $("#newBurg").val().trim(),
-        devour: $("[name=devour]:checked").val().trim()
+        burger_name: $("#newBurg").val().trim(),
+        devoured: $("[name=devour]:checked").val().trim()
+        
       };
-  
+      console.log(Burger, "new burger to be added")
       
       $.ajax("/api/burgers", {
         type: "POST",
         data: Burger
       }).then(
         function() {
-          console.log("Burger added");
+          console.log(Burger, "added");
           location.reload();
         }
-      );
-    });
-  
-    $(".delete-burg").on("click", function(event) {
-      var id = $(this).data("id");
-  
-      $.ajax("/api/burgers/" + id, {
-        type: "DELETE"
-      }).then(
-        function() {
-          console.log("deleted burger", id);
-          location.reload();
-        }
-      );
-    });
+      ).catch(function(err){
+        console.log(err)
+      })
+    })
+        
   });
   
